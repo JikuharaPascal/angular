@@ -45,6 +45,16 @@ export class ToyService {
 
   getToy(id:string):Toy{ return this.toydata.find(toy=>toy.id.toString()==id) as Toy; }
 
+  getToyNumInCart(id:string):number {
+    let num:number = 0;
+    for (let i = 0; i < this.productlist.length; i++) {
+        if(this.productlist[i].toy.id.toString() != id) { continue; }
+        num = this.productlist[i].quantity;
+        break;
+    }
+    return num;
+  }
+
   getToydataOrderbyDisplay():MenuData[]{
       let toydata = this.getToydata();
       let categorydata = this.categorydata.sort((a,b)=> a.display_order + b.display_order);

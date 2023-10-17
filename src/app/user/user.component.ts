@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MarginService } from '../margin.service';
+import { UserService } from '../user.service';
+import { User } from './user';
 
 @Component({
   selector: 'app-user',
@@ -8,9 +10,12 @@ import { MarginService } from '../margin.service';
 })
 export class UserComponent {
 
-  constructor(private msv:MarginService){}
+  myUserData!:User;
+
+  constructor(private msv:MarginService, private usv:UserService){}
 
   ngOnInit() {
     this.msv.SetVisible(true, true, false);
+    this.myUserData = this.usv.getUser();
   }
 }

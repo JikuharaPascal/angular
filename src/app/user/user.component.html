@@ -1,14 +1,18 @@
 <h2>MY PROFILE</h2>
 
-<div class="Prof">
-
+<div class="Content">
+    <div class="Prof">
+        <h3>{{myUserData.name}}</h3>
+        <a [routerLink]="['/user-settings']">Edit Profile</a>
+        <br>
+        <a [routerLink]="['/user-changepassword']">Change Password</a>
+        <br>
+        <b>Sign Out</b>
+    </div>
+    <div class="Operation">
+        <h3></h3>
+        <a [routerLink]="['/cart']">Check Your Cart</a>
+        <br>
+        <a [routerLink]="['/cart-orderhistory']">Order history</a>
+    </div>
 </div>
-<nav class="Settings">
-    <a [routerLink]="['/cart-orderhistory']">Order history</a>
-    <br>
-    <a [routerLink]="['/user-settings']">Settings</a>
-    <br>
-    <a [routerLink]="['/user-changepassword']">Change Password</a>
-    <br>
-    <b>Sign Out</b>
-</nav>

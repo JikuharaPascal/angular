@@ -19,7 +19,11 @@ export class ToyDataComponent {
   protected toy!:Toy;
   protected category!:string;
 
-  protected choices:string[] = [];
+  protected maxNum = 10;
+  protected toyNumInCart:number = 0;
+  protected noMoreAddInCart:boolean = false;
+
+  protected choices:number[] = [];
   protected toyform:FormGroup;
 
   constructor(private fb:FormBuilder, private route:ActivatedRoute, private location:Location, private msv:MarginService, private rsv:ToyService) {
@@ -32,10 +36,11 @@ export class ToyDataComponent {
     this.toyid = this.route.snapshot.paramMap.get('id') as string;
     this.toy = this.rsv.getToy(this.toyid) as Toy;
     this.category = this.rsv.getCategory(this.toy.category_id).name as string;
-
+    this.toyNumInCart = this.rsv.getToyNumInCart(this.toyid);
+    this.noMoreAddInCart = (this.toyNumInCart >= this.maxNum);
     this.choices = [];
-    for(let i = 1; i < 11; i++) {
-      this.choices.push(i.toString());
+    for(let i = 1; i < (this.maxNum + 1); i++) {
+      this.choices.push(i);
     }
   }
 
@@ -54,4 +59,5 @@ export class ToyDataComponent {
 
     this.rsv.AddToCart(product);
   }
+  IsOverNum(num:number):boolean { return (num > (this.maxNum - this.toyNumInCart));}
 }

@@ -4,6 +4,7 @@ import { ToyService } from '../toy.service';
 import { Product } from '../toy/products';
 import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
 import { PaymentMethod } from '../toy/paymentmethod';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-cart-checkout',
@@ -16,8 +17,9 @@ export class CartCheckoutComponent {
   protected totalPriceWithTax:number = 0;
   protected paymentForm:FormGroup;
   protected choices:PaymentMethod[] = [];
+  protected address:string = "";
 
-  constructor(private msv:MarginService, private rsv:ToyService, private fb:FormBuilder){
+  constructor(private msv:MarginService, private rsv:ToyService, private usv:UserService, private fb:FormBuilder){
     this.paymentForm=this.fb.group({paymentMethod: 1});
   }
 
@@ -25,6 +27,7 @@ export class CartCheckoutComponent {
     this.msv.SetVisible(true, true, false);
     this.UpdateData();
 
+    this.address = this.usv.getUser().address;
     let methodList = this.rsv.getPaymentMethodData();
     for(let i = 0; i < methodList.length; i++) {
       this.choices.push(methodList[i]);
