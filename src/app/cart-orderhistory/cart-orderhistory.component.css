@@ -1,0 +1,24 @@
+img {
+    width: 175px;
+    height: 125px;
+}
+
+.CartItemTable {
+    min-width: 90%;
+    justify-content: center;
+    margin: auto;
+    border-collapse: collapse;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+.CartItemTable td, .CartItemTable th {
+    border-bottom: 1px solid gray;
+}
+
+.SalesMenuTable {
+    font-size: 18px;
+    border-spacing: 5px;
+    text-align: left;
+    padding-left: 5%;
+}

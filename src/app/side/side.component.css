@@ -1,0 +1,17 @@
+.CategorySideMenu {
+    width:150px;
+    border-right: 1px solid gray;
+}
+
+.CategorySideMenu li {
+    list-style: none;
+}
+
+.CategorySideMenu {
+	display: none;
+}
+@media screen and (min-width : 750px){
+	.CategorySideMenu {
+		display: block;
+	}
+}

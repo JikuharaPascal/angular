@@ -1,0 +1,25 @@
+<div class="Detail">
+    <div class="DetailImg">
+        <img src="{{toy.image_url}}" alt="{{toy.name}}">
+    </div>
+
+    <div class="DetailText">
+        <h2>{{toy.name}}</h2>
+        <p>{{category}}</p>
+        <hr>
+        <h2>&yen;{{toy.price}}</h2>
+        <hr>
+        <h3>DESCRIPTION</h3>
+        <p>{{toy.description}}</p>
+        <hr>
+        <form [formGroup]="toyform" novalidate>
+        <select formControlName="quantity">
+            <option *ngFor="let choice of choices" [value]="choice">{{ choice }}</option>
+        </select>
+        </form>
+        <br>
+        <button (click)="addToCart()" [routerLink]="['/cart']">ADD TO CART</button>
+
+        <!-- <p>入力値:{{toyform.value | json}}</p> -->
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<header *ngIf="IsVisible()">
+    <!--ロゴ-->
+    <a class="HeaderTitle" [routerLink]="['./toy-list']">
+      <img src="{{URL_Logo}}" alt="Logo">
+    </a>
+
+    <!--検索-->
+    <nav class="Search">
+      <input #keyword size = "20" [value]="getCurrentSearchName()">
+      <button (click)="SearchWord(keyword.value)" [routerLink]="['./toy-list']">SEARCH</button>
+    </nav>
+
+    <!--ボタン-->
+    <nav class="User">
+      <button [routerLink]="['./user']">
+        <b>{{getUserName()}}</b>
+      </button>
+      <button [routerLink]="['./cart']">
+        <b>CART </b>
+        <br>
+        <b id="Cart">{{getNumInCart()}}</b>
+      </button>
+    </nav>
+</header>

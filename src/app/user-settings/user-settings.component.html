@@ -1,0 +1,34 @@
+            <h3 class="UserSiteSection">SETTING</h3>
+            <hr>
+            <form [formGroup]="settingForm" novalidate>
+                <table class="FormFormat" border="0">
+                    <tr>
+                        <th>NAME:</th>
+                        <td><input type="text" formControlName="name" value="{{user.name}}" required></td>
+                    </tr>
+                    <tr>
+                        <th>MAIL:</th>
+                        <td><input type="email" formControlName="mail" value="{{user.mail}}" required></td>
+                    </tr>
+                    <tr>
+                        <th>TEL:</th>
+                        <td><input type="text" formControlName="tel" value="{{user.tel}}" required></td>
+                    </tr>
+                    <tr>
+                        <th>PREFECTURE:</th>
+                        <td>
+                            <select formControlName="prefecture_id" value="{{user.prefecture_id}}" required>
+                                <option *ngFor="let prefecture of prefectureDataList" value="{{prefecture.id}}" [selected]="(prefecture.id == user.prefecture_id)">{{prefecture.name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ADDRESSTEL:</th>
+                        <td><input type="text" formControlName="address" value="{{user.address}}" required></td>
+                    </tr>
+                    <tr>
+                        <th><button (click)="BackTo()">BACK</button></th>
+                        <td><button (click)="Confirme()" [routerLink]="['/user']" [disabled]="!CheckInput()">UPDATE</button></td>
+                    </tr>
+                </table>
+            </form>

@@ -1,0 +1,42 @@
+
+
+.ToyMenu {
+    padding: 40px 0px;
+}
+
+.Categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+}
+
+.Toy {
+    text-align:center;
+    background-color: rgba(250,250,250,.5);
+    justify-content: center;
+    margin: 5px 5px;
+}
+
+.Toy p{
+    font-size: 24px;
+    font-weight: bold;
+    color:red;
+}
+
+.Toy a{
+    font-weight: bold;
+    text-decoration:none;
+}
+
+.Toy img {
+    width: 200px;
+    height: 225px;
+}
+
+.Toy img:hover{
+    opacity: 0.6;
+}
+
+.Toy:hover{
+    background-color: rgba(200,200,200,255) ;
+}

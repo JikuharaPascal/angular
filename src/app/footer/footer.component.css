@@ -1,0 +1,29 @@
+footer {
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(141, 240, 141);
+}
+
+#FooterContent {
+    justify-content:space-between;
+    display: flex;
+    margin: auto;
+    text-align: left;
+}
+
+#FooterContent a{
+    color:black;
+    text-decoration:none;
+}
+
+#FooterContent img {
+    bottom: 0;
+    right: 0;
+    position:fixed;
+    width: 364px;
+    height: 45px;
+}

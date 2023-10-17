@@ -1,0 +1,17 @@
+
+<div class="ToyMenu">
+    <div *ngFor="let category of menudata">
+        <p id="{{category.name}}" ><b>{{category.name}}</b></p>
+        <hr>
+        <div class="Categories">
+            <nav class="Toy" *ngFor="let toy of category.toydata">
+                <a routerLink="/toy-data/{{toy.id}}">
+                    <img src="{{toy.image_url}}" alt="{{toy.name}}">
+                    <br>
+                    <a>{{toy.name}}</a>
+                    <p>&yen;{{toy.price}}</p>
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>

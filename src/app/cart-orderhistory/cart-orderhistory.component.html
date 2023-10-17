@@ -1,0 +1,40 @@
+<div *ngIf="!IsNoOrder()">
+    <h2 class="UserSiteSection">ORDER LIST</h2>
+    <div *ngFor="let order of orderList">
+        <h3  class="UserSiteSection">{{order.sales.date}}</h3>
+            <!--一覧表示-->
+        <table class="CartItemTable">
+            <tr>
+                <th> </th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th> </th>
+            </tr>
+            <tr *ngFor="let product of order.productList">
+                <td><img class="Samnail" src="{{product.toy.image_url}}" alt="{{product.toy.name}}"></td>
+                <td><a routerLink="/toy-data/{{product.toy.id}}"><b>{{product.toy.name}}</b></a></td>
+                <td><p>&yen;{{product.toy.price}}</p></td>
+                <td><p>{{product.quantity}}</p></td>
+            </tr>
+        </table>
+
+        <table class="SalesMenuTable">
+            <tr>
+                <td style="font-weight:bold">TOTAL</td>
+                <td>&yen;{{order.totalPrice}}</td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold">TOTAL WITH TAX</td>
+                <td>&yen;{{order.totalPriceWithTax}}</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+</div>
+
+<div *ngIf="IsNoOrder()">
+    <nav class="HeadingText">
+        <h2>There is no Order yet...</h2>
+    </nav>
+</div>
