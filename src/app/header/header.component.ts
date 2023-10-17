@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 })
 export class HeaderComponent {
 
-    protected URL_Logo:string = "/assets/img/Logo.png";
+    protected URL_Logo:string = "assets/img/Logo.png";
 
     constructor(private msv:MarginService, private rsv:ToyService, private usv:UserService){}
 

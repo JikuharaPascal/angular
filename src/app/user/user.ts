@@ -11,11 +11,11 @@ export class User {
 export const USERDATA:User[] = [
     {
         id:1,
-        name:"admin621",
+        name:"admin",
         mail:"admin@email",
         hashed_password:"password",
-        tel:"4-621-1945",
+        tel:"111-1111-1111",
         prefecture_id:2,
-        address:"C4-621号室"
+        address:"1県1市1丁目1-111号室"
     }
 ];
