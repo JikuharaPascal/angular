@@ -78,7 +78,7 @@ export const TOYDATA: Toy[]= [
     },
     {
         id: 10,
-        name:"WW2 Jeep",
+        name:"Jeep",
         price:20000,
         description:" 1/72 Scale Military Vehicle Jeep.",
         image_url:"assets/img/Vehicle02.jpg",

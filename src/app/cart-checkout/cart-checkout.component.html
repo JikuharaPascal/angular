@@ -1,3 +1,4 @@
+<button id="Back" [routerLink]="['/cart']">Back</button>
 <h2>THE CONTENTS OF CART</h2>
 <!--一覧表示-->
 <table class="CartItemTable">
@@ -36,5 +37,5 @@
     </span>
 </form>
 <br>
-<button (click)="Purchase()" [routerLink]="['/cart']">PURCHASE</button>
+<button id="Purchase" (click)="Purchase()" [routerLink]="['/cart']">PURCHASE</button>
 <!-- <p>入力値:{{paymentForm.value | json}}</p> -->

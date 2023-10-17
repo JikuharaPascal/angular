@@ -1,6 +1,6 @@
 <nav class="CategorySideMenu" *ngIf="IsVisible()">
     <h4>Category</h4>
     <ul *ngFor="let category of categorydata">
-        <li><a routerLink="/toy-list#{{category.name}}">{{category.name}}</a></li>
+        <li><a href="./toy-list#{{category.name}}">{{category.name}}</a></li>
     </ul>
 </nav>

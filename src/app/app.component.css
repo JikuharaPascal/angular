@@ -1,5 +1,8 @@
 html {
-    min-height: 100vw;
+    /*min-width: 100vw;*/
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background-color: rgb(255, 239, 224);
 }
 body {

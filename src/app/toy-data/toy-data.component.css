@@ -27,3 +27,29 @@
 #Warning {
     color:red;
 }
+
+select {
+    width: 10%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#Add {
+    height: 10%;
+    width: 30%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+#Buy {
+    margin-left: 2%;
+
+    height: 10%;
+    width: 30%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius:  10px;
+    background-color: orange;
+}

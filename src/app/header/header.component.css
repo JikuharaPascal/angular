@@ -11,9 +11,20 @@ header {
     align-items: center;
 }
 
+.HeaderTitle {
+    width: 10em;
+    height: 3rem;
+    padding: 1px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.HeaderTitle:hover {
+    border: 2px solid black;
+}
+
 .HeaderTitle img {
-    width:150px;
-    height: 50px;
+    width:100%;
+    height:100%;
 }
 
 .User button {
@@ -28,7 +39,7 @@ header {
 }
 
 .User button:hover {
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
 #Cart {

@@ -12,6 +12,7 @@
         <h3>DESCRIPTION</h3>
         <p>{{toy.description}}</p>
         <hr>
+        <h3>Quantity</h3>
         <p id="Warning" *ngIf="noMoreAddInCart">You have exceeded the maximum number of items</p>
         <form [formGroup]="toyform" novalidate>
         <select formControlName="quantity" [disabled]="noMoreAddInCart">
@@ -19,8 +20,8 @@
         </select>
         </form>
         <br>
-        <button (click)="addToCart()" [routerLink]="['/cart']"  [disabled]="noMoreAddInCart">ADD TO CART</button>
-
+        <button id="Add" (click)="addToCart()" [routerLink]="['/cart']"  [disabled]="noMoreAddInCart">ADD TO CART</button>
+        <button id="Buy" (click)="addToCart()" [routerLink]="['/cart-checkout']"  [disabled]="noMoreAddInCart">BUY NOW</button>
         <!-- <p>入力値:{{toyform.value | json}}</p> -->
     </div>
 </div>
