@@ -31,7 +31,7 @@ export class ToyDataComponent {
   }
 
   ngOnInit() {
-    this.msv.SetVisible(true, true, true);
+    this.msv.SetVisible(true, true, false);
 
     this.toyid = this.route.snapshot.paramMap.get('id') as string;
     this.toy = this.rsv.getToy(this.toyid) as Toy;

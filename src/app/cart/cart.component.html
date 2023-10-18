@@ -8,17 +8,17 @@
             <th>QUANTITY</th>
             <th> </th>
         </tr>
-
-            <tr *ngFor="let product of productlist">
-                <td><img class="Samnail" src="{{product.toy.image_url}}" alt="{{product.toy.name}}"></td>
-                <td><a routerLink="/toy-data/{{product.toy.id}}"><b>{{product.toy.name}}</b></a></td>
-                <td><p>&yen;{{product.toy.price}}</p></td>
-                <td><p>{{product.quantity}}</p></td>
-                <td>
-                        <button id="WarningButton" (click)="RemoveFromCart(product)" [routerLink]="['/cart']">REMOVE</button>
-                </td>
-            </tr>
+        <tr *ngFor="let product of productlist">
+            <td><img class="Samnail" src="{{product.toy.image_url}}" alt="{{product.toy.name}}"></td>
+            <td><a routerLink="/toy-data/{{product.toy.id}}"><b>{{product.toy.name}}</b></a></td>
+            <td><p>&yen;{{product.toy.price}}</p></td>
+            <td><p>{{product.quantity}}</p></td>
+            <td>
+                <button class="WarningBtn" (click)="RemoveFromCart(product)" [routerLink]="['/cart']">REMOVE</button>
+            </td>
+        </tr>
     </table>
+
     <table class="SalesMenuTable">
         <tr>
             <td style="font-weight:bold">TOTAL</td>
@@ -31,10 +31,10 @@
         <tr></tr>
         <tr>
             <td>
-                <button class="WarningButton" [routerLink]="['/cart-checkout']">PROCEED TO CHECKOUT</button>
+                <button class="CheckOutBtn" [routerLink]="['/cart-checkout']">PROCEED TO CHECKOUT</button>
             </td>
             <td>
-                <button id="DefaultButton" [routerLink]="['/toy-list']">CONTINUE SHOPPING</button>
+                <button class="DefaultBtn" [routerLink]="['/toy-list']">CONTINUE SHOPPING</button>
             </td>
         </tr>
     </table>
@@ -43,6 +43,6 @@
 <div *ngIf="IsNonProductList()">
     <nav class="HeadingText">
         <h2>There is nothing in cart...</h2>
-        <button id="DefaultButton" [routerLink]="['/toy-list']">Go Shopping</button>
+        <button class="DefaultBtn" [routerLink]="['/toy-list']">Go Shopping</button>
     </nav>
 </div>

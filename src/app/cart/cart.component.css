@@ -22,3 +22,21 @@
     text-align: left;
     padding-left: 5%;
 }
+
+
+.DefaultBtn, .WarningBtn, .CheckOutBtn {
+    font-size: 18px;
+    font-weight: bold;
+    border-radius:  5px;
+}
+.DefaultBtn {
+    color: white;
+    background-color: gray;
+}
+.WarningBtn {
+    color: white;
+    background-color: red;
+}
+.CheckOutBtn {
+    background-color: orange;
+}

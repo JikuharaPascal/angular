@@ -24,4 +24,6 @@ export class ToyListComponent {
     ngDoCheck() {
       this.menudata = this.rsv.getToydataOrderbyDisplay();
     }
+
+    getCategoryName(id:number):string { return this.rsv.getCategoryName(id); }
 }

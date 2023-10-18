@@ -10,6 +10,12 @@
       <button (click)="SearchWord(keyword.value)" [routerLink]="['./toy-list']">SEARCH</button>
     </nav>
 
+    <!-- <nav class="Category">
+      <div *ngFor="let category of categorydata">
+        <button  [routerLink]="['./toy-list']">{{category.name}}</button>
+      </div>
+    </nav> -->
+
     <!--ボタン-->
     <nav class="User">
       <button [routerLink]="['./user']">

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ToyService } from '../toy.service';
 import { MarginService } from '../margin.service';
 import { UserService } from '../user.service';
+import { Category } from '../toy/category';
 
 
 @Component({
@@ -12,10 +13,11 @@ import { UserService } from '../user.service';
 export class HeaderComponent {
 
     protected URL_Logo:string = "assets/img/Logo.png";
+    categorydata!:Category[];
 
     constructor(private msv:MarginService, private rsv:ToyService, private usv:UserService){}
 
-    ngOnInit() {}
+    ngOnInit() { this.categorydata = this.rsv.getCategorydata(); }
     ngOnChanges() {}
 
     SearchWord(keyword:string):void {

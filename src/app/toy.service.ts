@@ -85,6 +85,7 @@ export class ToyService {
 
   getCategorydata():Category[] { return this.categorydata; }
   getCategory(id:number):Category { return this.categorydata.find(category=>category.id==id) as Category; }
+  getCategoryName(id:number):string { return this.getCategory(id).name as string; }
 
   getPaymentMethodData():PaymentMethod[] { return this.paymentMethodData; }
   getPaymentMethod(id:number):PaymentMethod { return this.paymentMethodData.find(method=>method.id==id)as PaymentMethod; }
